@@ -1,25 +1,62 @@
-// # Compiled class file
+allure-results/
+screenshots/
+screenshot/
+test-output/
+build/
+
+application.log
+##############################
+## Java
+##############################
+.mtj.tmp/
 *.class
-*.html
-*.png
-
-
-// # Log file
-*.log
-
-// # Package Files #
 *.jar
-*.zip
-*.tar.gz
-
-// # Maven output dir
+*.war
+*.ear
+*.nar
+hs_err_pid*
+activityLog.log
+##############################
+## Maven
+##############################
 target/
-.project
-.classpath
-.settings
-.DS_Store
-*.swp
-.vscode
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+pom.xml.bak
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
 
-.idea
+##############################
+## IntelliJ
+##############################
+out/
+.idea/
+.idea_modules/
 *.iml
+*.ipr
+*.iws
+##############################
+## Eclipse
+##############################
+.settings/
+bin/
+tmp/
+.metadata
+.classpath
+.project
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.factorypath
+
+## OS X
+##############################
+.DS_Store
