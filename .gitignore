@@ -1,15 +1,16 @@
-# Compiled class file
+// # Compiled class file
 *.class
+*.html
 
-# Log file
+// # Log file
 *.log
 
-# Package Files #
+// # Package Files #
 *.jar
 *.zip
 *.tar.gz
 
-# Maven output dir
+// # Maven output dir
 target/
 .project
 .classpath

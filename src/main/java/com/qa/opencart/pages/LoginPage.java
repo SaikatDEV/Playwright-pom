@@ -46,11 +46,12 @@ public class LoginPage {
 	//	*********************************Page Actions*****************************	
     public String getLoginPageTitle(){
 	    String pageTitle =  page.title();
-	    Log.info("Page title is: " + pageTitle);
+	    Log.info("Login Page title is: " + pageTitle.trim());
 	    return pageTitle;
 	}
 	
 	public boolean isForgotPasswordLinkExist(){
+		page.waitForSelector(fld_Forgotten_Password);
 	    boolean isVisible =  page.isVisible(fld_Forgotten_Password);
 	    Log.info("Forgotten Password is Visible: " + isVisible);
 	    return isVisible;
@@ -67,6 +68,7 @@ public class LoginPage {
 	    Log.info("User has been logged in");
 	        return true;
 	    }
+	    Log.info("User was not logged in");
 	    return false;
 	}
 }

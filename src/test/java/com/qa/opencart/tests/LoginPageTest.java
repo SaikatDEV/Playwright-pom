@@ -4,7 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.utilities.AppConstants;
-import jline.internal.Log;
 
 public class LoginPageTest extends BaseTest{
 	
@@ -15,7 +14,9 @@ public class LoginPageTest extends BaseTest{
 		Assert.assertEquals(loginPageTitle, AppConstants.LOGIN_PAGE_TITLE);
 		boolean linkExist = loginPage.isForgotPasswordLinkExist();
 		Assert.assertTrue(linkExist);
-		Log.info("Pageword link is exists");
+		
+		boolean loggedIn = loginPage.doLogin(AppConstants.USERNAME, AppConstants.PASSWORD);
+		Assert.assertTrue( loggedIn);
 	}
 
 }
