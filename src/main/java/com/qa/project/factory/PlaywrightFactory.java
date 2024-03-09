@@ -13,6 +13,7 @@ import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
+import com.qa.opencart.utilities.AppConstants;
 import com.qa.project.utilities.ConfigProperties;
 
 import jline.internal.Log;
@@ -55,22 +56,22 @@ public class PlaywrightFactory{
 		
 		switch (browserName) {
 		case "chromium":
-			browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(ConfigProperties.HEADLESS));
 			tlBrowser.set(browser);
 			
 			break;
 		case "firefox":
-			browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(ConfigProperties.HEADLESS));
 			tlBrowser.set(browser);
 			
 			break;
 		case "safari":
-			browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(ConfigProperties.HEADLESS));
 			tlBrowser.set(browser);
 
 			break;
 		case "chrome":
-			browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false));
+			browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(ConfigProperties.HEADLESS));
 			tlBrowser.set(browser);
 
 			break;

@@ -1,6 +1,7 @@
 // # Compiled class file
 *.class
 *.html
+*.png
 
 
 // # Log file
