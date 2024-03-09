@@ -7,6 +7,7 @@ import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.utilities.AppConstants;
 import com.qa.opencart.utilities.ConfigProperties;
 
+//@SerenityTest
 public class HomePageTest extends BaseTest{
 	
 	@Test(description = "This test will verify the home page title", priority = 1)
