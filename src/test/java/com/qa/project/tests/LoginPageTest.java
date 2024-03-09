@@ -1,9 +1,10 @@
-package com.qa.opencart.tests;
+package com.qa.project.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import com.qa.opencart.base.BaseTest;
-import com.qa.opencart.utilities.AppConstants;
+
+import com.qa.project.base.BaseTest;
+import com.qa.project.utilities.AppConstants;
 
 public class LoginPageTest extends BaseTest{
 	

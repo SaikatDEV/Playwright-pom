@@ -1,4 +1,4 @@
-package com.qa.opencart.utilities;
+package com.qa.project.utilities;
 
 public class AppConstants {
 	public static final String HOME_PAGE_TITLE = "Your Store";

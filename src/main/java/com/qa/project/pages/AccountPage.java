@@ -1,4 +1,4 @@
-package com.qa.opencart.pages;
+package com.qa.project.pages;
 
 public class AccountPage {
 

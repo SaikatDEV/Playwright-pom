@@ -1,13 +1,13 @@
-package com.qa.opencart.base;
+package com.qa.project.base;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import com.microsoft.playwright.Page;
-import com.qa.opencart.factory.PlaywrightFactory;
-import com.qa.opencart.pages.HomePage;
-import com.qa.opencart.pages.LoginPage;
-import com.qa.opencart.utilities.ConfigProperties;
+import com.qa.project.factory.PlaywrightFactory;
+import com.qa.project.pages.HomePage;
+import com.qa.project.pages.LoginPage;
+import com.qa.project.utilities.ConfigProperties;
 
 public class BaseTest {
 

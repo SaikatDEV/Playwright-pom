@@ -1,4 +1,4 @@
-package com.qa.opencart.utilities;
+package com.qa.project.utilities;
 
 public class ConfigProperties {
 	

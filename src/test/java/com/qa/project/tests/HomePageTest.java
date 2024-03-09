@@ -1,11 +1,12 @@
-package com.qa.opencart.tests;
+package com.qa.project.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import com.qa.opencart.base.BaseTest;
-import com.qa.opencart.utilities.AppConstants;
-import com.qa.opencart.utilities.ConfigProperties;
+
+import com.qa.project.base.BaseTest;
+import com.qa.project.utilities.AppConstants;
+import com.qa.project.utilities.ConfigProperties;
 
 //@SerenityTest
 public class HomePageTest extends BaseTest{

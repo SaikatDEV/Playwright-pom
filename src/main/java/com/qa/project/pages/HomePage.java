@@ -1,4 +1,4 @@
-package com.qa.opencart.pages;
+package com.qa.project.pages;
 
 import com.microsoft.playwright.Page;
 import jline.internal.Log;

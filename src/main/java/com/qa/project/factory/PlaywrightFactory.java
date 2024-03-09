@@ -1,9 +1,11 @@
-package com.qa.opencart.factory;
+package com.qa.project.factory;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.Base64;
 import java.util.Properties;
 import org.testng.ITestResult;
 import com.microsoft.playwright.Browser;
@@ -11,7 +13,7 @@ import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
-import com.qa.opencart.utilities.ConfigProperties;
+import com.qa.project.utilities.ConfigProperties;
 
 import jline.internal.Log;
 
@@ -109,20 +111,13 @@ public class PlaywrightFactory{
 	*/
 	
 	// Method to capture screenshot on test failure
-    public void captureScreenshotOnFailure(ITestResult result) {
-        try {
-            // Capture screenshot
-            byte[] screenshot = page.screenshot();
-
-            // Save screenshot to a file
-            File screenshotFile = new File("screenshots/" + result.getName() + ".png");
-            Files.copy(new ByteArrayInputStream(screenshot), screenshotFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-
-            // Log the screenshot file path
-            Log.info("Screenshot captured: " + screenshotFile.getAbsolutePath());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+	public static String takeScreenshot() {
+		String path = System.getProperty("user.dir") + "/screenshot/" + System.currentTimeMillis() + ".png";
+		//getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
 		
+		byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
+		String base64Path = Base64.getEncoder().encodeToString(buffer);
+		
+		return base64Path;
+	}	
 }
