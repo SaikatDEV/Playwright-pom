@@ -13,7 +13,7 @@ public class HomePageTest extends BaseTest{
 	@Test(description = "This test will verify the home page title", priority = 1)
 	public void homePageTitleTest() {
 		String actualTitle = homePage.getHomePageTitle();
-		Assert.assertEquals(actualTitle, AppConstants.LOGIN_PAGE_TITLE);
+		Assert.assertEquals(actualTitle, AppConstants.HOME_PAGE_TITLE);
 		Log.info("Home Page Title has been verified");
 	}
 	

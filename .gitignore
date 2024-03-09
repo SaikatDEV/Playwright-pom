@@ -1,0 +1,22 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Package Files #
+*.jar
+*.zip
+*.tar.gz
+
+# Maven output dir
+target/
+.project
+.classpath
+.settings
+.DS_Store
+*.swp
+.vscode
+
+.idea
+*.iml

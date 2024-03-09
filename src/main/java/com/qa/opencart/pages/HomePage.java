@@ -1,7 +1,6 @@
 package com.qa.opencart.pages;
 
 import com.microsoft.playwright.Page;
-
 import jline.internal.Log;
 
 public class HomePage {
@@ -27,17 +26,26 @@ public class HomePage {
     //	*********************************TEXTFIELDs[txt]***************************
 
     //	*********************************BUTTONs[btn]******************************
-
+        
+    //	*********************************LINKs[lnk]********************************
+	private String lnk_Login = "a:text('Login')";
+	private String link_MyAccount = "//span[normalize-space()='My Account']";
 
     //	*********************************FORMs[frm]********************************
-
-    //	*********************************LINKs[lnk]********************************
 
     //	*********************************DDLs[ddl]*********************************
 
 	//	Page Constructor
 	public HomePage(Page page) {
 		this.page = page;		
+	}
+	
+	// Navigate to the next Page
+	public LoginPage navigateToLoginPage(){
+		page.click(link_MyAccount);
+		page.click(lnk_Login);
+		Log.info("Navigating to the Login Page");
+		return new LoginPage(page);
 	}
 	
 	//	Methods/Actions
@@ -62,9 +70,5 @@ public class HomePage {
 		Log.info("Header is: " + header);
 		return header;
 	}
-	
-	
-
-	
 	
 }
