@@ -1,0 +1,940 @@
+<html>
+<head>
+<title>TestNG:  Open Cart Home Page Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Open Cart Home Page Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/5</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Mar 09 11:23:51 EST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>11 seconds (11278 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.opencart.tests.HomePageTest.setup()'><b>setup</b><br>Test class: com.qa.opencart.tests.HomePageTest</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:103)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:105)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:94)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:90)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPageImpl(BrowserContextImpl.java:323)
+	at com.microsoft.playwright.impl.BrowserContextImpl.lambda$newPage$12(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:79)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:44)
+	at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:61)
+	at com.qa.opencart.base.BaseTest.setup(BaseTest.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+	at org.testng.TestRunner.run(TestRunner.java:497)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:183)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:163)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:101)
+	... 35 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace599782425", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace599782425'><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:103)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:105)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:94)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:90)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPageImpl(BrowserContextImpl.java:323)
+	at com.microsoft.playwright.impl.BrowserContextImpl.lambda$newPage$12(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:79)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:44)
+	at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:61)
+	at com.qa.opencart.base.BaseTest.setup(BaseTest.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+	at org.testng.TestRunner.run(TestRunner.java:497)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:183)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:163)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:101)
+	... 35 more
+</pre></div></td>
+<td>11</td>
+<td>com.qa.opencart.tests.HomePageTest@424e1977</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.opencart.tests.HomePageTest.tearDown()'><b>tearDown</b><br>Test class: com.qa.opencart.tests.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.opencart.tests.HomePageTest@424e1977</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.opencart.tests.HomePageTest.homePageTitleTest()'><b>homePageTitleTest</b><br>Test class: com.qa.opencart.tests.HomePageTest<br>Test method: This test will verify the home page title</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:103)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:105)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:94)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:90)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPageImpl(BrowserContextImpl.java:323)
+	at com.microsoft.playwright.impl.BrowserContextImpl.lambda$newPage$12(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:79)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:44)
+	at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:61)
+	at com.qa.opencart.base.BaseTest.setup(BaseTest.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+	at org.testng.TestRunner.run(TestRunner.java:497)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:183)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:163)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:101)
+	... 35 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace79290250", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace79290250'><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:103)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:105)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:94)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:90)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPageImpl(BrowserContextImpl.java:323)
+	at com.microsoft.playwright.impl.BrowserContextImpl.lambda$newPage$12(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:79)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:44)
+	at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:61)
+	at com.qa.opencart.base.BaseTest.setup(BaseTest.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+	at org.testng.TestRunner.run(TestRunner.java:497)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:183)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:163)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:101)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>com.qa.opencart.tests.HomePageTest@424e1977</td></tr>
+<tr>
+<td title='com.qa.opencart.tests.HomePageTest.homePageURLTest()'><b>homePageURLTest</b><br>Test class: com.qa.opencart.tests.HomePageTest<br>Test method: This test will verify the home page URL</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:103)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:105)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:94)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:90)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPageImpl(BrowserContextImpl.java:323)
+	at com.microsoft.playwright.impl.BrowserContextImpl.lambda$newPage$12(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:79)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:44)
+	at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:61)
+	at com.qa.opencart.base.BaseTest.setup(BaseTest.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+	at org.testng.TestRunner.run(TestRunner.java:497)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:183)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:163)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:101)
+	... 35 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1803093683", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1803093683'><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:103)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:105)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:94)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:90)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPageImpl(BrowserContextImpl.java:323)
+	at com.microsoft.playwright.impl.BrowserContextImpl.lambda$newPage$12(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:79)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:44)
+	at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:61)
+	at com.qa.opencart.base.BaseTest.setup(BaseTest.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+	at org.testng.TestRunner.run(TestRunner.java:497)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:183)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:163)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:101)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>com.qa.opencart.tests.HomePageTest@424e1977</td></tr>
+<tr>
+<td title='com.qa.opencart.tests.HomePageTest.searchTest()'><b>searchTest</b><br>Test class: com.qa.opencart.tests.HomePageTest<br>Test method: This test will verify the search results</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:103)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:105)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:94)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:90)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPageImpl(BrowserContextImpl.java:323)
+	at com.microsoft.playwright.impl.BrowserContextImpl.lambda$newPage$12(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:79)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:44)
+	at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:61)
+	at com.qa.opencart.base.BaseTest.setup(BaseTest.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+	at org.testng.TestRunner.run(TestRunner.java:497)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:183)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:163)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:101)
+	... 35 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace399373008", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace399373008'><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:103)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:105)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:94)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:90)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPageImpl(BrowserContextImpl.java:323)
+	at com.microsoft.playwright.impl.BrowserContextImpl.lambda$newPage$12(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:79)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:44)
+	at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:61)
+	at com.qa.opencart.base.BaseTest.setup(BaseTest.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+	at org.testng.TestRunner.run(TestRunner.java:497)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:183)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:163)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:101)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>com.qa.opencart.tests.HomePageTest@424e1977</td></tr>
+<tr>
+<td title='com.qa.opencart.tests.HomePageTest.searchTest()'><b>searchTest</b><br>Test class: com.qa.opencart.tests.HomePageTest<br>Test method: This test will verify the search results</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:103)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:105)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:94)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:90)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPageImpl(BrowserContextImpl.java:323)
+	at com.microsoft.playwright.impl.BrowserContextImpl.lambda$newPage$12(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:79)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:44)
+	at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:61)
+	at com.qa.opencart.base.BaseTest.setup(BaseTest.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+	at org.testng.TestRunner.run(TestRunner.java:497)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:183)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:163)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:101)
+	... 35 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace391506011", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace391506011'><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:103)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:105)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:94)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:90)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPageImpl(BrowserContextImpl.java:323)
+	at com.microsoft.playwright.impl.BrowserContextImpl.lambda$newPage$12(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:79)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:44)
+	at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:61)
+	at com.qa.opencart.base.BaseTest.setup(BaseTest.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+	at org.testng.TestRunner.run(TestRunner.java:497)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:183)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:163)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:101)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>com.qa.opencart.tests.HomePageTest@424e1977</td></tr>
+<tr>
+<td title='com.qa.opencart.tests.HomePageTest.searchTest()'><b>searchTest</b><br>Test class: com.qa.opencart.tests.HomePageTest<br>Test method: This test will verify the search results</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:103)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:105)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:94)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:90)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPageImpl(BrowserContextImpl.java:323)
+	at com.microsoft.playwright.impl.BrowserContextImpl.lambda$newPage$12(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:79)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:44)
+	at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:61)
+	at com.qa.opencart.base.BaseTest.setup(BaseTest.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+	at org.testng.TestRunner.run(TestRunner.java:497)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:183)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:163)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:101)
+	... 35 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1936550492", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1936550492'><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:103)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:105)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:94)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:90)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPageImpl(BrowserContextImpl.java:323)
+	at com.microsoft.playwright.impl.BrowserContextImpl.lambda$newPage$12(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:79)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:316)
+	at com.microsoft.playwright.impl.BrowserContextImpl.newPage(BrowserContextImpl.java:44)
+	at com.qa.opencart.factory.PlaywrightFactory.initBrowser(PlaywrightFactory.java:61)
+	at com.qa.opencart.base.BaseTest.setup(BaseTest.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:529)
+	at org.testng.TestRunner.run(TestRunner.java:497)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Target closed
+  name=&apos;Error
+  stack=&apos;Error: Target closed
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:163:16
+    at new Promise (&lt;anonymous&gt;)
+    at WKSession.send (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:159:12)
+    at WKPage._updateViewport (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:815:23)
+    at WKPage._initializePageProxySession (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:152:24)
+    at WKPage._onTargetCreated (/private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkPage.js:423:33)
+    at WKSession.emit (node:events:390:28)
+    at /private/var/folders/18/q5phhfxn7n78r8d9_6qnp95r0000gn/T/playwright-java-10633716006018897578/package/lib/server/webkit/wkConnection.js:205:41
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:183)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:163)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:101)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>com.qa.opencart.tests.HomePageTest@424e1977</td></tr>
+</table><p>
+</body>
+</html>
